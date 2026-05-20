@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spesial untuk Kesayanganku ✨</title>
+    <style>
+        /* Menggunakan font yang kasual dan ceria */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ffe5ec, #ffeb3b, #c5f6fa);
+            background-size: 400% 400%;
+            animation: gradientBg 15s ease infinite;
+            color: #4a4a4a;
+            overflow-x: hidden;
+        }
+
+        /* Animasi background warna-warni bergerak pelan */
+        @keyframes gradientBg {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Musik Player */
+        .music-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        /* Bagian Pertama: Headline & Foto Utama */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .headline {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #ff477e;
+            text-shadow: 2px 2px #fff;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .photo-frame {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            border: 8px solid #fff;
+            box-shadow: 0 8px 20px rgba(255, 71, 126, 0.3);
+            overflow: hidden;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-frame:hover {
+            transform: scale(1.05) rotate(5deg);
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .sub-headline {
+            font-size: 1.2rem;
+            background: #fff;
+            padding: 10px 20px;
+            border-radius: 50px;
+            color: #ff7096;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Bagian Kedua: Story & Foto Tambahan */
+        .story-section {
+            padding: 80px 20px;
+            background: #ffffff;
+            border-radius: 50px 50px 0 0;
+            box-shadow: 0 -10px 30px rgba(0,0,0,0.05);
+        }
+
+        .story-container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .story-photo {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 20px;
+            border: 6px solid #ff7096;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .story-text {
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .story-text h2 {
+            font-size: 2rem;
+            color: #ff477e;
+            margin-bottom: 15px;
+        }
+
+        /* Tombol Cinta/Interaktif */
+        .love-button {
+            background: #ff477e;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 71, 126, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .love-button:hover {
+            background: #ff7096;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Musik Player Aktif Otomatis (Beberapa browser butuh interaksi user dulu agar musik menyala) -->
+    <div class="music-container">
+        <audio controls autoplay loop>
+            <source src="lagu-romantis.mp3" type="audio/mpeg">
+            Browser kamu tidak mendukung pemutar musik.
+        </audio>
+    </div>
+
+    <!-- BAGIAN 1: HEADLINE & VISUAL FOTO -->
+    <section class="hero-section">
+        <h1 class="headline">Hai Cantik! ✨</h1>
+        <div class="photo-frame">
+            <!-- Ganti 'foto-utama.jpg' dengan nama file foto pacarmu -->
+            <img src="foto-utama.jpg" alt="Foto Pacarku">
+        </div>
+        <p class="sub-headline">Web spesial ini cuma buat kamu seorang ❤️</p>
+    </section>
+
+    <!-- BAGIAN 2: STORY & FOTO KEDUA -->
+    <section class="story-section">
+        <div class="story-container">
+            <!-- Ganti 'foto-story.jpg' dengan nama file foto kedua -->
+            <img class="story-photo" src="foto-story.jpg" alt="Momen Bersama">
+            
+            <div class="story-text">
+                <h2>Tentang Kamu di Mataku</h2>
+                <p>
+                    Tulis ceritamu di sini ya! Misalnya: "Kamu itu orang yang selalu bisa bikin hari-hariku jadi lebih berwarna lewat senyumanmu. Terima kasih sudah hadir dan membawa banyak keceriaan. Setiap momen kecil bareng kamu selalu jadi cerita favorit yang ingin aku simpan selamanya..."
+                </p>
+                <br>
+                <button class="love-button" onclick="alert('I Love You More! ❤️')">Klik di Sini!</button>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
