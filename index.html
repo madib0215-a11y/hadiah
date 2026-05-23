@@ -40,6 +40,15 @@
             border-radius: 20px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             z-index: 1000;
+            display: flex; /* Tambahkan flexbox untuk menyelaraskan ikon */
+            align-items: center; /* Sejajarkan secara vertikal */
+        }
+
+        /* Ikon Musik */
+        .music-icon {
+            font-size: 20px; /* Ukuran ikon */
+            color: #ff477e; /* Warna ikon */
+            margin-right: 10px; /* Jarak antara ikon dan pemutar musik */
         }
 
         /* Bagian Pertama: Headline & Foto Utama */
@@ -75,11 +84,12 @@
             box-shadow: 0 8px 20px rgba(255, 71, 126, 0.3);
             overflow: hidden;
             margin-bottom: 20px;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Tambahkan transisi */
         }
 
         .photo-frame:hover {
             transform: scale(1.05) rotate(5deg);
+            box-shadow: 0 10px 25px rgba(255, 71, 126, 0.4); /* Tambahkan sedikit bayangan saat dihover */
         }
 
         .photo-frame img {
@@ -148,11 +158,19 @@
             cursor: pointer;
             box-shadow: 0 5px 15px rgba(255, 71, 126, 0.4);
             transition: all 0.3s ease;
+            animation: pulsate 2s infinite ease-out; /* Tambahkan animasi pulsasi */
         }
 
         .love-button:hover {
             background: #ff7096;
             transform: translateY(-3px);
+        }
+
+        /* Animasi Pulsasi Tombol Cinta */
+        @keyframes pulsate {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
     </style>
 </head>
@@ -160,6 +178,7 @@
 
     <!-- Musik Player Aktif Otomatis (Beberapa browser butuh interaksi user dulu agar musik menyala) -->
     <div class="music-container">
+        <i class="music-icon fas fa-music"></i> /* Ikon Musik */
         <audio controls autoplay loop>
             <source src="Oh My Angel - CHAI.mp3" type="audio/mpeg">
             Browser kamu tidak mendukung pemutar musik.
@@ -171,7 +190,7 @@
         <h1 class="headline">Hai Cantik! ✨</h1>
         <div class="photo-frame">
             <!-- Ganti 'foto-utama.jpg' dengan nama file foto pacarmu -->
-            <img src="foto lumoyy.jpg" alt="Foto Pacarku">
+            <img src="foto lumoyy.jpg.jpg" alt="Foto Pacarku">
         </div>
         <p class="sub-headline">Web spesial ini cuma buat kamu seorang ❤️</p>
     </section>
@@ -180,12 +199,12 @@
     <section class="story-section">
         <div class="story-container">
             <!-- Ganti 'foto-story.jpg' dengan nama file foto kedua -->
-            <img class="story-photo" src="foto luna2.jpg" alt="Momen Bersama">
+            <img class="story-photo" src="foto-story.jpg" alt="Momen Bersama">
             
             <div class="story-text">
                 <h2>Tentang Kamu di Mataku</h2>
                 <p>
-                    Tulis ceritamu di sini ya! Misalnya: "Kamu itu orang yang selalu bisa bikin hari-hariku jadi lebih berwarna lewat senyumanmu. Terima kasih sudah hadir dan membawa banyak keceriaan. Setiap momen kecil bareng kamu selalu jadi cerita favorit yang ingin aku simpan selamanya..."
+                    "Kamu itu orang yang selalu bisa bikin hari-hariku jadi lebih berwarna lewat senyumanmu. Terima kasih sudah hadir dan membawa banyak keceriaan. Setiap momen kecil bareng kamu selalu jadi cerita favorit yang ingin aku simpan selamanya..."
                 </p>
                 <br>
                 <button class="love-button" onclick="alert('I Love You More! ❤️')">Klik di Sini!</button>
